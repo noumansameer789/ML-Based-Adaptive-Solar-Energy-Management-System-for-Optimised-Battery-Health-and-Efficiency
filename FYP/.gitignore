@@ -1,0 +1,42 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+dist/
+build/
+*.log
+*.tmp
+*.zip
+*.rar
+*.7z
+
+# Python model/data artifacts
+*.pkl
+
+# Arduino / compiled / temp
+*.o
+
+# Windows image formats from phone if you do not need originals
+# *.HEIC
+
+# Proteus / backup workspace files
+*.workspace
+Project Backups/
+
+# Large vendored libraries you can re-download later
+New folder/DallasTemperature-3.8.0/
+New folder/Firebase-ESP32-master/
+New folder/LiquidCrystal_I2C-1.1.2/
+New folder/PZEM004Tv30/
+New folder/ZMPT101B/
+New folder/firebase-arduino-master/
+New folder/thingspeak-arduino-master/
