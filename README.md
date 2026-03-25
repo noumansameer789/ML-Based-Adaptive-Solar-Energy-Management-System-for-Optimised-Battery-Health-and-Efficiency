@@ -98,7 +98,11 @@ Expand support for larger solar storage systems
 Author
 Nouman Sameer
 
-License
+## License
+
+All rights reserved.
+
+This project is shared for viewing and academic reference only. No permission is granted to copy, modify, distribute, or reuse any part of this work without explicit written permission from the author.
 
 This project is for academic and educational purposes.
 
