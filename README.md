@@ -94,8 +94,8 @@ Add more environmental features for better accuracy
 Improve dashboard/visualization for live monitoring
 Integrate cloud-based logging and analytics
 Expand support for larger solar storage systems
-Author
 
+Author
 Nouman Sameer
 
 License
