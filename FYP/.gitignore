@@ -45,3 +45,6 @@ Block-new-cropped.png
 FYP initial presentation/
 FYP-Mid-Presentation/
 FYP-final-defense/
+
+# Local firmware credentials
+secrets.h

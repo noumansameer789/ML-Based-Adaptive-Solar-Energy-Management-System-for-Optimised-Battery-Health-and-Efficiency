@@ -1,111 +1,39 @@
-# ML-Based Adaptive Solar Energy Management System for Optimised Battery Health and Efficiency
+# Solar battery management original project archive
 
-## Overview
-This project presents an ML-based adaptive solar energy management system designed to improve battery health, charging efficiency, and overall solar power utilization. The system combines machine learning, real-time sensor monitoring, and embedded control to predict solar irradiance and optimize battery charging/discharging decisions under varying environmental conditions.
+BS Electrical Engineering final-year project, September 2024–June 2025, team of three. This archive preserves the prototype firmware, model-development scripts and hardware photographs. The [cleaned portfolio](https://github.com/noumansameer789/solar-battery-ml-controller) contains a smaller control-policy example with tests.
 
-The project is built around a Raspberry Pi and supporting hardware sensors, with an XGBoost-based prediction model used to estimate solar irradiance from weather-related inputs.
+## Evidence available
 
-## Objectives
-- Predict solar irradiance using machine learning
-- Improve battery charging and discharging efficiency
-- Extend lithium-ion battery health and lifecycle
-- Monitor environmental and electrical parameters in real time
-- Provide a scalable and cost-effective solution for smart solar systems
+- [ESP32 telemetry firmware](FYP/New%20folder/esp32_codev2/esp32_codev2.ino)
+- [State-of-charge circuit sketch](FYP/soc%20circuit/1/1.ino)
+- [Forecast development scripts](FYP/Weather-forecast-model/Battery%20optimization)
+- [Hardware photographs](FYP/Hardware%20imgs)
+- [Prototype photographs](FYP/Hardware%20imgs/Prototype)
 
-## Features
-- Solar irradiance prediction using XGBoost and Random Forest models
-- Real-time sensor integration for environmental monitoring
-- Battery state monitoring and optimization
-- Hardware prototype for practical deployment
-- Data visualization and model evaluation plots
-- Weather-based adaptive energy management
+The inspected ESP32 firmware uses **ThingSpeak**. The previous Firebase reference was unsupported and has been removed. Trained `.pkl` weights are not committed, so this archive is not a one-command model reproduction. Some data and figure entries are Git LFS pointers and require the associated LFS objects; their presence in the tree does not guarantee downloadable bytes.
 
-## Project Structure
-```text
-FYP/
-│
-├── Weather-forecast-model/
-│   └── Battery optimization/
-│       ├── xgboost_model.py
-│       ├── xgboost_modelv2.py
-│       ├── xgboost_modelv3.py
-│       ├── random_forest.py
-│       ├── weather_data1.csv
-│       ├── xgboost_irradiance_model.pkl
-│       └── evaluation plots
-│
-├── soc circuit/
-│   ├── Proteus/project files
-│   ├── Arduino code
-│   └── simulation screenshots
-│
-├── Hardware imgs/
-│   ├── sensor images
-│   ├── prototype images
-│   └── battery parameter screenshots
+## Reported project results
 
-Technologies Used
-Python
-XGBoost
-Random Forest
-Raspberry Pi
-Arduino/ESP32
-Firebase
-CSV/XLSX weather datasets
-Embedded sensors for temperature, humidity, rain, light, and battery monitoring
-Machine Learning Models
+| Measure | Original reported result |
+| --- | --- |
+| NASA rows after cleaning | 22,943 from more than 26,000 |
+| XGBoost chronological holdout R² | 0.970 |
+| Random Forest holdout R² | 0.956 |
+| Sunny/cloudy classification accuracy | 96.4% using the original threshold |
+| Battery prototype | battery pack |
 
-This project includes:
+These figures are reported project results and have not been rerun during this archive cleanup. No quantified extension of battery life, charging-efficiency improvement or commercial readiness is established. The scripts retain their historical versions; do not assume each uses the same split as the reported evaluation.
 
-XGBoost model for solar irradiance prediction
-Random Forest model for comparison and evaluation
+## Reuse and hardware limits
 
-The models are trained using weather-related input data and evaluated using prediction plots, error analysis, feature importance, and time-series comparisons.
+The firmware needs review of calibration, wiring, protective hardware and test conditions before use. Do not use a software thermal cut-off as a substitute for an independent, suitable BMS. Credentials belong in local configuration and must not be committed.
 
-Hardware Components
+All rights reserved on this original team-project archive. Existing ownership and third-party rights are unchanged.
 
-The hardware side of the project includes:
+## Hardware gallery
 
-Raspberry Pi
-Battery Management System (BMS)
-Temperature and humidity sensor
-Rain sensor
-Light sensor / LDR
-Anemometer
-SOC monitoring circuitry
-Prototype circuit setup
-Use Cases
-Smart solar charging systems
-Battery-aware renewable energy management
-Off-grid solar applications
-Low-cost intelligent power systems
-Academic and research-based embedded ML projects
-Results
+[View web-compatible hardware photographs](docs/hardware-gallery/README.md). Original HEIC files are retained alongside these JPEG viewing copies.
 
-The project demonstrates how machine learning can be integrated with embedded hardware to:
+## Battery specification verification
 
-predict solar conditions more effectively,
-adapt charging behavior,
-reduce battery stress,
-and improve long-term energy management performance.
-Future Improvements
-Deploy model directly on edge hardware for real-time inference
-Add more environmental features for better accuracy
-Improve dashboard/visualization for live monitoring
-Integrate cloud-based logging and analytics
-Expand support for larger solar storage systems
-
-Author
-Nouman Sameer
-
-## License
-
-All rights reserved.
-
-This project is shared for viewing and academic reference only. No permission is granted to copy, modify, distribute, or reuse any part of this work without explicit written permission from the author.
-
-This project is for academic and educational purposes.
-
-Notes
-
-Some large files and generated assets may be excluded from version control using .gitignore and Git LFS where needed.
+Project descriptions conflict on the parallel-cell count (3S3P versus 3S9P). The available photograph does not independently establish the claimed 23.4 Ah pack capacity. The exact topology and capacity are therefore not presented as verified specifications. Confirm the wiring, cell ratings and measured capacity before reusing those figures. No battery-life or capacity-test result is implied by this archive.

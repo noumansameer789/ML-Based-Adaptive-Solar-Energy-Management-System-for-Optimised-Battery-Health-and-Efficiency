@@ -10,13 +10,14 @@
 #define CELL2_PIN 39
 #define CELL3_PIN 36
 
-#define SECRET_SSID "Redmi Note 11"
-#define SECRET_PASS "12347890"
+// Wi-Fi and ThingSpeak credentials live in secrets.h, which is git-ignored.
+// Copy secrets.example.h to secrets.h and fill in your own values before flashing.
+#include "secrets.h"
 
 WiFiClient client;
 
-unsigned long myChannelNumber =  2976035;
-const char * myWriteAPIKey = "Z5P3KWD7QB8FRKIY";
+unsigned long myChannelNumber = SECRET_CH_ID;
+const char * myWriteAPIKey = SECRET_WRITE_APIKEY;
 
 // Timing
 unsigned long lastSensorRead = 0;
